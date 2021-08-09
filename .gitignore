@@ -1,3 +1,9 @@
+
+# Removed Custom File by Me
+*.bin
+
+
+
 # Prerequisites
 *.d
 
