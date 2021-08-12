@@ -1,38 +1,6 @@
 #include<iostream>
 using namespace std;
 
-void neha(){
-
-    int pocketMoney=3000;
-
-    for (int date = 0; date <= 30; date++)  
-    {
-        if (date%2 == 0)
-        {
-            continue;
-        }
-        
-        if (pocketMoney==0){
-            break;
-        }
-
-        cout<< "Go out Today\n";
-        pocketMoney = pocketMoney - 300;
-    }
-    
-}
-void eg_2(){
-    for (int i = 0; i < 100; i++)
-    {
-        if (i%3==0){
-            continue;
-        }
-        cout<<i<<"\n";
-    }
-    
-
-}
-
 void prime_num(){
     int n;
     // cout<<"\nEnter any Number : ";
@@ -53,6 +21,29 @@ void prime_num(){
         cout<< "\nThis is a Prime Number.";
     }
 
+}
+
+void prime_num_2()
+{
+        int num, div;
+    div = 2;
+
+    cout << "Enter Your Number to Check for Prime or Not : ";
+    cin >>  num;
+    cout << "Entered Number is : " << num;
+  
+    while (num > div)
+    {
+        if(num % div == 0)
+        {
+            cout << "This is not a Prime Number";
+        }
+
+        else{
+            div = div + 1;
+        }
+        
+    }
 }
 
 void print_all_prime_num(){
@@ -79,12 +70,9 @@ void print_all_prime_num(){
 
 }
 
-int main(){
-    
-    // neha();
-    // eg_2();
-    // prime_num();
+int main()
+{
+    prime_num();
+    prime_num_2();
     print_all_prime_num();
-    
-
 }
