@@ -17,5 +17,9 @@ Doubts : [**Problem Question**](https://github.com/All-CODE-with-Explanation/C_a
 
     b. [**C++ by Apna College**](https://github.com/All-CODE-with-Explanation/C_and_CPP/tree/main/Learned_From_YT/C%2B%2Bby_Apna_College)
 
-- [** **]()
-- [** **]()
+
+# Browse by Level of Questions
+
+1. [**Basics Mixed Problem**](https://github.com/All-CODE-with-Explanation/C_and_CPP/tree/main/Basics%20Mixed%20Program)
+
+2. [**Special Questions 👌👌**](https://github.com/All-CODE-with-Explanation/C_and_CPP/tree/main/Special%20Questions%F0%9F%91%8C%F0%9F%91%8C%F0%9F%91%8C)
