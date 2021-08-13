@@ -1,5 +1,16 @@
+/* 
+    Taking binary number as input.
+
+    Checking the entered number is binary or not.
+
+    Reversing the Binary Number.
+
+    Displaying the output.
+
+*/
+
 #include <iostream>
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
 using namespace std;
 
 class binary
@@ -10,12 +21,12 @@ class binary
         void chk_bin(void);
 
     public:
-        void read(void);
+        void read();
         void ones_compliment(void);
         void display(void);
 };
 
-void binary :: read(void)
+void binary :: read()
 {
     cout<< "Enter a Binary Number : ";
     cin >> s;

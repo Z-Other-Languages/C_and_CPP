@@ -1,14 +1,23 @@
+/*
+    1. take input as itemID, itemPrice, and with one cylce of input coutner will increment.
+
+    2. with the help of the display function we can print all the functions yet taken input from i=1 to i = counter;
+*/
+
 #include <iostream>
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
 using namespace std;
 
 class shop
 {
+
+    // data members
     int itemId[100];
     int itemPrice[100];
     int counter;
 
     public: 
+        // member function
         void initCounter(void) {counter = 0; }
         void setPrice(void);
         void displayPrice(void);
@@ -26,6 +35,7 @@ void shop :: setPrice(void)
 
 void shop :: displayPrice(void)
 {
+    cout<< endl;
     for (int i=0; i<counter; i++)
     {
         cout<< "The price of item with id : " << itemId[i] << " is Rs "<< itemPrice[i] << endl; 
