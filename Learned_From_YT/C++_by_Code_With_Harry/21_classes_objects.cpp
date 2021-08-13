@@ -3,8 +3,17 @@
 
     There are three access modifiers : public, private and protected.
 
-    Note 1 :-  
+    ✨ Note 1 :-  
         Any data memeber or function which is declared without without any access modifier is by default always private.
+
+    ✨ Note 2 :-
+        When static member is created, there is only a single copy of the data member which is SHARED b/w all the objects of the Class.
+
+        The data members are Not Static
+        i,e. Every objects created has an individual copy of the data member and it is Not Shared.
+
+    ✨ Note 3 :-
+        When a static method is created, they become independent of any object and class. Static methods can only access static data members and static methods. Static methods can only be accessed using the scope resolution operator.
 
     There are 2 ways to define a member function:
     1.    Inside class definition

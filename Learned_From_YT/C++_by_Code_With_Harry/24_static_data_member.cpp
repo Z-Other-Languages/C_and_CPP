@@ -1,10 +1,21 @@
-#include <iostream>
+/*
+    ✨ Note 2 :-
+        When static member is created, there is only a single copy of the data member which is SHARED b/w all the objects of the Class.
+        
+        The data members are Not Static
+        i,e. Every objects created has an individual copy of the data member and it is Not Shared.
+*/
 
+#include <iostream>
 using namespace std;
 
 class Employee
 {
     int id;
+
+    /*
+        ✅ When a static method is created, they become independent of any object and class. Static methods can only access static data members and static methods. Static methods can only be accessed using the scope resolution operator.
+        👇👇                             */
     static int count;
 
     public:
@@ -25,11 +36,18 @@ class Employee
 
 };
 
-int Employee :: count;
+/*
+        💊
+        When a static method is created, they become independent of any object and class. Static methods can only access static data members and static methods. Static methods can only be accessed using the scope resolution operator.
+        👇👇 
+*/
+int Employee :: count;  // Default value is 0
 
 int main()
 {
     Employee a,b,c;
+
+    // a.count=1; // cannot do this as id and count are private
 
     a.setData();
     a.getData();
