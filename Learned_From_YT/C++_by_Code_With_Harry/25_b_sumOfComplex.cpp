@@ -1,5 +1,5 @@
 #include <iostream>
-#include <bits/stdc++.h>
+
 using namespace std;
 
 class mycomplex
@@ -14,6 +14,7 @@ class mycomplex
             b=v2;
         }
 
+    //  👇 Here class name must be same and Object Name may be random 
         void setDataBySum(mycomplex o1, mycomplex o2)
         {
             a = o1.a +o2.a;

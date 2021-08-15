@@ -1,39 +1,36 @@
 #include<iostream>
 using namespace std;
 
-class Employee
+class complex_num
 {
-    
-    private:
-        int a, b, c;
-
     public:
-        int d, e, f;
+        int x,y, z;
 
-        void setData(int a, int b, int c);
+        void get_num(int n1, int n2)
+        {
+            x = n1;
+            y = n2;
 
-        void getData(){
-            cout<< "Value of a : " << a << endl;
-            cout<< "Value of b : " << b << endl;
-            cout<< "Value of d : " << d << endl;
-            cout<< "Value of e : " << e << endl;
+            display_complex();
+        }
+
+        void display_complex()
+        {
+            cout<< "Complex Number is : "<< x << " + " << y << "i" << endl; 
+        }
+
+        void sum_complex(complex_num o1, complex_num o2)
+        {
+            cout<< "Sum is : " << o1.x + o2.x << " + " << o1.y + o2.y << "i" << endl;
         }
 };
 
-void Employee :: setData(int a1, int b1, int c1){
-    a = a1;
-    b = b1;
-    c = c1;
-}
-
 int main()
 {
-    Employee ayush;
+    complex_num o1, o2, o3;
 
-    ayush.d = 89;
-    ayush.e = 99;
-
-    ayush.setData(2, 8, 16);
-    ayush.getData();
-
+    o1.get_num(2, 6);
+    o2.get_num(5, 3);
+    
+    o3.sum_complex(o1, o2);
 }
