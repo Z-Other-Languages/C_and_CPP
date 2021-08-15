@@ -1,5 +1,15 @@
+/*
+    Learn Implicit and Explicit call
+
+    // Implicit Call
+    Complex a(4, 6);
+
+    // Explicit Call
+    Complex b = Complex(5, 12);
+
+*/
+
 #include <iostream>
-#include <bits/stdc++.h>
 using namespace std;
 
 class Complex
