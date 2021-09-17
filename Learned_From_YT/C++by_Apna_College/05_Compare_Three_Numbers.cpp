@@ -56,7 +56,7 @@ void method_2(){
 }
 
 int main(){
-    // method_1();
+    method_1();
     method_2();
 
     return 0;
