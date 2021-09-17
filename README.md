@@ -5,6 +5,8 @@ All C &amp; C++ Programs with Explanation are Here which are practiced by Me whi
 
 Doubts : [**Problem Question**](https://github.com/All-CODE-with-Explanation/C_and_CPP/tree/main/Doubts_are_Here)
 
+HW Question : [**3rd SEM HW**](https://github.com/All-CODE-with-Explanation/C_and_CPP/tree/main/HW_3rd_SEM)
+
 # Browse by Mentor & Source
 
 1. [**C Language by CWH**](https://github.com/All-CODE-with-Explanation/C_and_CPP/tree/main/Learned_From_YT/C_Language_CodeWithHarry)
