@@ -1,4 +1,6 @@
 /*
+    Also, refer to 24_static_data_member
+
     ✨ Note 2 :-
         When static member is created, there is only a single copy of the data member which is SHARED b/w all the objects of the Class.
         

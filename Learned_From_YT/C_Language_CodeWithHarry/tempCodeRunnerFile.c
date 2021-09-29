@@ -1,18 +1,18 @@
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
 
-void sentence_input(int b){
-    int c = b;
-      for (int i = 0; i < 3; i++)
-    {
-        int b = 10;
-       
-    }
+int changeValue(int *address)
+{
+    *address = 566;
 }
 
 int main()
 {
-    int a=75,b,c;
-    sentence_input(a);
-    printf("\n Value of b : %d", c);
+    int a= 44;
+    printf("Initial Value of a is : %d \n", a);
+
+    changeValue(&a);
+
+    printf("Final Value of a is : %d", a);
+
+    return 0;
 }
