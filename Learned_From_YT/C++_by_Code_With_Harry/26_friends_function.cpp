@@ -1,3 +1,6 @@
+// Demerit of friend function in OOPS Concept :-
+//    It breaks the concept of data hiding feature of the OOPs.
+
 #include <iostream>
 using namespace std;
 

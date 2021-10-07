@@ -53,7 +53,7 @@ int main()
     // Sorted array for binary search
     int arr[] = {2, 4, 8, 22, 44, 50, 54, 57, 95, 112,225, 350, 516, 606};
     int size = sizeof(arr)/sizeof(int);
-    int element = 516;
+    int element = 8;
     int searchIndex = binarySearch(arr, size, element);
     cout<< endl << "Element " << element << " found at Position : " << searchIndex+1 << endl;
 

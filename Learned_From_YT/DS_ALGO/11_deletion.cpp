@@ -10,7 +10,7 @@ void display(int arr[], int size){
     cout<< endl;
 }
 
-int insertArr(int arr[], int size, int index){
+int deleteArr(int arr[], int size, int index){
     if(index >= size){
         cout<< "Error! Enter a valid size" << endl;
     }
@@ -25,10 +25,10 @@ int insertArr(int arr[], int size, int index){
 
 int main(){
     int arr[100] = {10,5,19, 2, 1};
-    int size = 5, newElement=88, capacity=100, index=5;
+    int size = 5, newElement=88, capacity=100, index=0;
     display(arr, size);
 
-    insertArr(arr, size, index);
+    deleteArr(arr, size, index);
     size -= 1;
     display(arr, size);
     return 0;

@@ -26,7 +26,7 @@ int insertArr(int arr[], int size, int newElement, int capacity, int index){
 
 int main(){
     int arr[100] = {10,5,19, 2, 1};
-    int size = 5, newElement=88, capacity=100, index=0;
+    int size = 5, newElement=88, capacity=100, index=2;
     display(arr, size);
 
     insertArr(arr, size, newElement, capacity, index);

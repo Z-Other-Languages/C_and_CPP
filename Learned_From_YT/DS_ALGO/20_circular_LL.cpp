@@ -22,11 +22,15 @@ void circular_LL_traversal(struct Node *head)
 
 struct Node  *insert_at_first(struct Node *head, int data)
 {
-    struct Node *ptr = head;
+    struct Node *ptr = head;    // ptr is the new element that is to be added at the first
     ptr = (struct Node *)malloc(sizeof(struct Node));
     ptr->data = data;
 
-    // traversing node *p to the end
+    /*
+    traversing node *p to the end
+    *p is traversed to the end and then *p next points to the New Element *ptr which is now the head
+    and finally New Head *ptr next element points to the previous 1st element
+    by doing so previous 1st element is Now 2nd Element  */
     struct Node *p = head->Next;
     while (p->Next != head)
     {
