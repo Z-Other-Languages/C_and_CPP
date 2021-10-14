@@ -20,7 +20,7 @@ int main()
             // i.e. New address can be reinitialized to the same pointer again
 
     int &ref = x;
-    // &r = y; // Reference Variable can't be reassigned // Compile Error ❌❌
+    // &ref = y; // Reference Variable can't be reassigned // Compile Error ❌❌
     
     cout<< "&ref : " << &ref << endl;
     cout<< "ref : " << ref << endl;
@@ -30,7 +30,7 @@ int main()
     // 2. Pointer can be assigned NULL directly, whereas reference cannot.
     p = NULL;   
     // &ref = NULL ; // Compile Error ❌❌
-    // cout<< "p : " << *p;
+    cout<< "p : " << *p;
 
 
     // 3. Pointers can iterate over an array, we can use increment/decrement operators to go to the next/previous item that a pointer is pointing to. 👇👇

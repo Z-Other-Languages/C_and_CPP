@@ -1,6 +1,18 @@
 /*  new and delete keyword
 
     Here * means dereferencing the pointer address, so finally after dereferencing it gives value.
+
+    ✨ new operator :- The new operator denotes a request for memory allocation on the free store.
+
+    🟢 If sufficient memory is available, new operator initializes the memory and returns the   address of the newly allocated and initialized memory to the pointer variable.
+
+    💊 Syntax to use new Operator :
+        To allocate the memory of any data type, the syntax is 👇
+
+        pointer-variable = new data-type;
+
+
+
 */
 #include <iostream>
 using namespace std;

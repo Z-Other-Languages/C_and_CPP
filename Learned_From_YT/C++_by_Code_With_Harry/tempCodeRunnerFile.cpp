@@ -1,2 +1,2 @@
-  myClass<float, char> obj(1.960, 'C');
-    obj.display();
+   int *ptr_2 = new int[10];
+    cout<< sizeof(ptr_2) << endl;

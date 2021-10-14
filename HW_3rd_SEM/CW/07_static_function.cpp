@@ -22,15 +22,16 @@ class College{
         cout<< "\nValue of a : " << a;
     }
 
-    // static void show_b()
-    // {
-    //     cout<< "\nstatic b : " << b;
-    // }
-
-    void show_b()
+    // Learn static member function 👇
+    static void show_b()
     {
         cout<< "\nstatic b : " << b;
     }
+
+    // void show_b()
+    // {
+    //     cout<< "\nstatic b : " << b;
+    // }
     
 };
 
