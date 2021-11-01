@@ -25,12 +25,12 @@ class Derive_video : public Base{
             videoLength = vl;
         }
 
-        // void display()
-        // {
-        //     cout<< endl << "Title of the Video : " << title << endl;
-        //     cout<< "Rating : " << rating << " out of 5 Stars." << endl;
-        //     cout<< "Length of Video : " << videoLength << endl << endl;
-        // }
+        void display()
+        {
+            cout<< endl << "Title of the Video : " << title << endl;
+            cout<< "Rating : " << rating << " out of 5 Stars." << endl;
+            cout<< "Length of Video : " << videoLength << endl << endl;
+        }
 };
 
 class Derive_text : public Base{

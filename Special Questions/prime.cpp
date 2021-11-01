@@ -72,7 +72,7 @@ void print_all_prime_num(){
 
 int main()
 {
-    prime_num();
+    // prime_num();
     prime_num_2();
-    print_all_prime_num();
+    // print_all_prime_num();
 }

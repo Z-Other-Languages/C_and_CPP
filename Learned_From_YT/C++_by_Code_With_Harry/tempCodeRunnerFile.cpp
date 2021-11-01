@@ -1,2 +1,1 @@
-   int *ptr_2 = new int[10];
-    cout<< sizeof(ptr_2) << endl;
+    virtual void display()=0;   // This is Pure Virtual Function
