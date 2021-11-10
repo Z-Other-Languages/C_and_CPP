@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 int fib(int n)
 {
     
@@ -14,8 +15,8 @@ int fib(int n)
 
 int main()
 {
-    printf("\n\nEnter the Number : ");
+    printf("\n\nEnter the Position of Fibbonaci Series : ");
     int a;
     scanf("%d", &a);
-    printf("Fibonacci Series of %d is : %d", a, fib(a));
+    printf("Fibonacci Series at Position %d is : %d", a, fib(a));
 }

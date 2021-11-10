@@ -1,22 +1,14 @@
 // Fibonacci series
 #include<stdio.h>
 #include<conio.h>
-void fibonacci(int num);
-void main(){
 
-    int num=0; 
-    printf("\n\nEnter number of terms : ");
-    scanf("%d", &num);
-
-    fibonacci(num);
-    getch();
-    }
 
 void fibonacci(int num)
 {
     int a, b, c, i=3;
     a=0;
     b=1;
+
     if (num == 1)
     printf("%d", a);
     if (num >=2);
@@ -29,6 +21,17 @@ void fibonacci(int num)
         a= b;
         b=c;
         i++;
-    
     }
 }
+
+void main(){
+
+    int num; 
+    printf("\n\nEnter number of terms : ");
+    scanf("%d", &num);
+
+    fibonacci(num);
+    getch();
+
+}
+
