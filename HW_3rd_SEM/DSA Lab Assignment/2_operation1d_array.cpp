@@ -14,6 +14,8 @@ class Operation{
     public:
         int index=0;
         int arr[5], ins_Element=0, ins_pos=0, del_pos, del_element;
+        int new_size=0;   // new size of merging array
+        int *arr_new;
 
         Operation()
         {
@@ -36,6 +38,8 @@ class Operation{
 
     void traverse();
 
+    void merge();
+
 };
 
 void Operation :: insert()
@@ -45,7 +49,12 @@ void Operation :: insert()
         cout<< "Enter the Position where to Insert : ";
         cin>> ins_pos;
         
-        arr[ins_pos - 1] = ins_Element;
+        if(ins_pos >=0 || ins_pos <= 5)
+            arr[ins_pos - 1] = ins_Element;
+        else
+            arr_new[ins_pos - 6] = ins_Element; ❌❌ Not WOrking
+
+        
 }
 
 void Operation :: traverse()
@@ -53,8 +62,27 @@ void Operation :: traverse()
     cout<< "[";
     for(int i=0; i < 5; i++)
     {
-        cout<< arr[i] << " ";
+        if(arr[i] == 0)
+        {
+            cout<< "_ ";
+        }
+        else
+            cout<< arr[i] << " ";
     }
+
+    if(new_size != 0)
+    {
+        for(int i=0; i<new_size; i++)
+        {
+            if(arr_new[i] == 0)
+                cout<< "_ ";
+
+            else{
+                cout<< arr_new[i] << " ";                 
+            }
+        }
+    }
+
     cout<< "]";
     
 }
@@ -69,6 +97,26 @@ void Operation :: deletion()
         {
             arr[i] = 0;
         }
+    }
+    
+    for(int i=0; i<new_size; i++)
+    {
+        if(del_element == arr_new[i])
+            arr_new[i] = 0;
+    }
+}
+
+void Operation :: merge()
+{
+
+    cout<< "Enter the size of the New Array : ";
+    cin >> new_size;
+    arr_new = new int[new_size];
+
+    for(int i=0; i<new_size; i++)
+    {
+        cout<< "Enter Element at Position " << i+ 6 << " : ";
+        cin>> arr_new[i];
     }
 }
 
@@ -107,10 +155,15 @@ int main()
             cout<< "\nTraversed Element is : ";
             obj.traverse();
             goto label;
+
+        case 4:
+            cout<< "\nMerging Element ... \n";
+            obj.merge();
+            goto label;
             
 
         default:
-            cout<< "\n\nPlease Enter a Correct Option\n";
+            cout<< "\n\nPlease Enter a Correct Option !!!...\n";
             goto label;
         
     }
