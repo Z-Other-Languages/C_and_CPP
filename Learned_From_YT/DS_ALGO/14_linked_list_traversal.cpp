@@ -17,6 +17,8 @@ void linked_list_traversal(struct Node *ptr){
 }
 
 int main(){
+    
+    // Initialize nodes
     struct Node *head;
     struct Node *second;
     struct Node *third;
@@ -29,20 +31,20 @@ int main(){
     fourth = (struct Node *)malloc(sizeof(struct Node));
 
     // link first and second node
-    head->data = 14;
-    head->Next = second;
+    head->data = 14;    // Assign data values 
+    head->Next = second;    // connect nodes
 
     // link Second and third node
-    second->data = 28;
-    second->Next = third;
+    second->data = 28;  // Assign data values 
+    second->Next = third;   // connect nodes
 
     // link Third and Fourth Node
-    third->data = 42;
-    third->Next = fourth;
+    third->data = 42;   // Assign data values 
+    third->Next = fourth;   // connect nodes
 
     // link fourth and NULL Node
-    fourth->data = 56;
-    fourth->Next = NULL;
+    fourth->data = 56;  // Assign data values 
+    fourth->Next = NULL;    // connect nodes    // declare the end of the list
 
     linked_list_traversal(head);
 
