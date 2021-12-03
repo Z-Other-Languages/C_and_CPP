@@ -7,23 +7,23 @@ using namespace std;
 int main()
 {
     cout << "Enter the size of Array : ";
-    int n;
-    cin >> n;
+    int size;
+    cin >> size;
 
-    int arr[n];
+    int arr[size];
     cout << "Enter the Elements of Array : ";
 
     // Taking Array as Input
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < size; i++)
     {
         cin >> arr[i];
     }
 
     // Bubble Sorting
     int counter = 1;
-    while (counter < n)
+    while (counter < size)
     {
-        for (int i = 0; i < n-counter; i++)
+        for (int i = 0; i < size-counter; i++)
         {
             if (arr[i] > arr[i+1])
             {
@@ -36,7 +36,7 @@ int main()
     }
 
     // Print the Array 
-    for (int i=0; i<n; i++)
+    for (int i=0; i<size; i++)
     {
         cout<< arr[i] << " ";
     }

@@ -1,0 +1,33 @@
+Books Abbrebiation :
+
+E Balagurusamy - 
+Yashwant Kanketkar (Let Us C++) -  
+
+
+#include<iostream>
+using namespace std;
+
+void test(int x)
+{
+    try{
+        if(x==1)    
+            throw x;
+    }
+
+    cout<< "End of try-catch system ";
+}
+
+int main()
+{
+    cout<< "Testing Multiple Catches \n";
+
+    cout<< "x == 1 \n";
+    test(1);
+
+    catch(int m)
+    {
+        cout<< "Caught an INTEGER \n\n";
+    }
+
+    return 0;
+}

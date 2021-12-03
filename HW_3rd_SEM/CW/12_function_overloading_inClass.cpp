@@ -15,8 +15,8 @@ using namespace std;
 class a
 {
     public:
-        // void in()        // Compile Time Binding
-        virtual void in()   // Run Time Binding
+        void in()        // Compile Time Binding
+        // virtual void in()   // Run Time Binding
         {
             cout<< "\nBase Class is called. \n\n";
         }

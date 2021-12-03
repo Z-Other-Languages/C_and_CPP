@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string.h>
 using namespace std;
 
 void palindrome_simple()
@@ -26,6 +27,26 @@ void palindrome_simple()
 
 void palindrome_string()
 {
+    char str_in[50], rev[50];
+    cout<< "Enter the String : ";
+    cin>> str_in;
+    // rev = str_in;
+    
+    strcpy(rev,  str_in);
+    strrev(rev);
+
+    /* 
+    Here difference word is used bcoz strcmp (string compare)
+    string is converted into ASCII Code and then subtracted
+    and if the string and reverse string are same then difference is 0
+
+    Different String then it will retrun non zero value
+    */
+    
+    int difference;
+    difference = strcmp(rev, str_in);    // If they are equal then value is  zero
+
+    cout<< difference << endl;
     
 }
 
