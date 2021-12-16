@@ -1,3 +1,6 @@
+// QUICK SORT PROGRAM WITH EXPLANATION
+// By AYUSH
+
 #include <iostream>
 using namespace std;
 
