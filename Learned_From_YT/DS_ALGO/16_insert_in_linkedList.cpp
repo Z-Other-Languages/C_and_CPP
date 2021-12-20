@@ -30,6 +30,7 @@ struct Node *insertAtFirst(struct Node *head, int data)
 
     return ptr;
 };
+
 // CASE 2 :  Insert in between particular index
 struct Node *insert_in_between(struct Node *head, int data, int index)
 {
@@ -43,7 +44,7 @@ struct Node *insert_in_between(struct Node *head, int data, int index)
     int i = 0;
     while (i != index-1)
     {
-        p = p->Next;
+        p = p->Next;        
         i++;
     }
     
@@ -71,7 +72,6 @@ struct Node *insert_at_end(struct Node *head, int data)
     ptr->Next = NULL;
     ptr->data = data;
 
-
     return head;
 };
 
@@ -88,6 +88,8 @@ struct Node *insert_after_a_node(struct Node *head, struct Node *preNode, int da
 };
 
 int main(){
+
+    // Initialize nodes
     struct Node *head;
     struct Node *second;
     struct Node *third;
@@ -118,26 +120,66 @@ int main(){
     cout<< endl << "Original Linked List Traversal Output" << endl;
     linked_list_traversal(head);
 
-    // Insert at First
-    // head = insertAtFirst(head, 7);      cout<< endl;
-    // linked_list_traversal(head);
+
+    // ⭐⭐⭐⭐⭐ MENU BASED PROGRAM 👇 ⭐⭐⭐⭐⭐
+
+    int e;  int index;
+    while(1)
+    {
+        cout<< "\n\nPerform Operation on Singly Linked List \n";
+        cout<< "1. Insertion at Begining. \n";
+        cout<< "2. Insertion in b/w at a Particular Index. \n";
+        cout<< "3. Insertion at END. \n";
+        cout<< "0. Press ZERO to Exit.\n";
+
+        cout<< "\nPress Any Key ...  ";
+        cin>> e;
+
+        switch(e)
+        {
+            case 1:
+            // Insert at First
+            head = insertAtFirst(head, 7);      cout<< endl;
+            linked_list_traversal(head);
+            break;
+
+            case 2:
+            // Insert in Between at a particular index
+            cout<< "Insert At Index : ";
+            cin>> index;
+            cout<< endl << "After Insertion in Between the Linked List." << endl;
+            head = insert_in_between(head, 21, index);   
+            linked_list_traversal(head);
+            break;
+
+            case 3:
+            // Insert at End of the Linked List
+            cout << endl << "Insert at End of the Linked List."<< endl ;
+            head = insert_at_end(head, 70);
+            linked_list_traversal(head);
+            break;
+
+            case 0:
+            cout<< "\nProgram Exited Successfully! \n\n";
+            exit(0);
+            break;
+
+            default:
+            cout<< "Please ! Select One of the Correct Option.\n";
+
+        }
+    }
+
 
     
-    // Insert in Between at a particular index
-    // cout<< endl << "After Insertion in Between the Linked List." << endl;
-    // head = insert_in_between(head, 21, 2);   
-    // linked_list_traversal(head);
 
-    // Insert at End of the Linked List
-    // cout << endl << "Insert at End of the Linked List."<< endl ;
-    // head = insert_at_end(head, 70);
-    // linked_list_traversal(head);
     
     
     // Insert After a given Node of the Linked List
     cout << endl << "Insert After a given Node of the Linked List."<< endl ;
     head = insert_after_a_node(head, second, 700);
     linked_list_traversal(head);
+            
 
     return 0;
 }

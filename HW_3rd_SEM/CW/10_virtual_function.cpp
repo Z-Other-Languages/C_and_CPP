@@ -1,3 +1,5 @@
+// Thoda incomplete concept hai in below program
+
 #include<iostream>
 using namespace std;
 
