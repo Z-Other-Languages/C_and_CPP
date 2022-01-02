@@ -31,10 +31,10 @@ public:
 class Derived_two : public Base
 {
 public:
-    // void display()
-    // {
-    //     cout << "\nInside the Derived two class. \n";
-    // }
+    void display()
+    {
+        cout << "\nInside the Derived two class. \n";
+    }
 };
 
 void driver_program_using_pointer()

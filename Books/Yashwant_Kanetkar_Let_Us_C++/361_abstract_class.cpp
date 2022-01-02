@@ -6,7 +6,7 @@
 
     1. Such a class exists only as a parent for the derived classes.
 
-    2. Now how do we communicate tousers who are going to use our classes that they should never create an object of the base class.
+    2. Now how do we communicate to users who are going to use our classes that they should never create an object of the base class.
 
     3. A better way to do would be to write the base class such that any object creation from it becomes impossible.
 
@@ -38,9 +38,11 @@ public:
 
 int main()
 {
-    // Base obj;    // ❌ (⌛ Refer to point 5)
+    // Base obj;    // ❌ (⌛ Refer to point 3)
 
     Derive obj_d;
+
+    obj_d.display();
 
     return 0;
 }

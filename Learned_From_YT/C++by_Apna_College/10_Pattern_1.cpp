@@ -1,4 +1,6 @@
 #include <iostream>
+#include <unistd.h>
+
 using namespace std;
 
 // in case of if elseif elseif else
@@ -45,6 +47,7 @@ void rect_patt()
         for (int j = 0; j < l; j++)
         {
             cout << "* ";
+            sleep(1);
         }
         cout << "\n";
     }
@@ -168,95 +171,121 @@ void floyd_triangle()
             cout << count << " ";
             count++;
         }
-        cout<< endl;
+        cout << endl;
     }
 }
 
-void butterfly(){
+void butterfly()
+{
     int n;
-    cout<< "\nEnter the Number of Rows for Butterfly Pattern : ";
+    cout << "\nEnter the Number of Rows for Butterfly Pattern : ";
     cin >> n;
 
     // upper part of butterfly
-    for (int i=1; i<=n; i++)    // upper part 'n' number of rows
+    for (int i = 1; i <= n; i++) // upper part 'n' number of rows
     {
-        for (int j=1; j<=i; j++) //left side extreme star in each row
+        for (int j = 1; j <= i; j++) //left side extreme star in each row
         {
-            cout<< "*";
+            cout << "*";
+            sleep(0.8);
         }
-        for (int k=1; k<=(2*n) - (2*i); k++)  // spacing between extreme stars
+        for (int k = 1; k <= (2 * n) - (2 * i); k++) // spacing between extreme stars
         {
-            cout<< " ";
+            cout << " ";
         }
-        for (int j=1; j<=i; j++)  //right side extreme star in each row
+        for (int j = 1; j <= i; j++) //right side extreme star in each row
         {
-            cout<< "*";
+            cout << "*";
+            sleep(0.8);
         }
-        cout<< endl;
+        cout << endl;
     }
 
-
     // Lower butterfly part
-    for (int i=n-1; i>=1; i--)
+    for (int i = n - 1; i >= 1; i--)
     {
-        for (int j=1; j<=i; j++)
+        for (int j = 1; j <= i; j++)
         {
-            cout<< "*";
+            cout << "*";
         }
-        for (int k=1; k<=(2*n) - (2*i); k++)
+        for (int k = 1; k <= (2 * n) - (2 * i); k++)
         {
-            cout<< " ";
+            cout << " ";
         }
-        for (int j=1; j<=i; j++)
+        for (int j = 1; j <= i; j++)
         {
-            cout<< "*";
+            cout << "*";
         }
-        cout<< endl;
+        cout << endl;
     }
 }
 
 int main()
 {
-    cout<< "\n1. Rectangle Pattern." <<endl;
-    cout<< "2. Hollow Rectangle Pattern" <<endl;
-    cout<< "3. Pyramid Pattern" <<endl;
-    cout<< "4. Inverted Pyramid" <<endl;
-    cout<< "5. Inverted Half Pyramid" <<endl;
-    cout<< "6. Left Half Pyramid" <<endl;
-    cout<< "7. Floyd Triangle" <<endl;
-    cout<< "8. Butterfly Pattern" <<endl;
-    cout<< "\nEnter the respective Pattern Number to go with : ";
-    // test();
-
-    int e;
-    cin>> e;
-    switch (e)
+    while (1)
     {
-        case 1: rect_patt();
-        break;
-        
-        case 2:  hollow_rect();
-        break;
+        cout<< "___________________________________________" << endl;
+        cout<< "___________________________________________" << endl;
+        cout << "\n1. Rectangle Pattern." << endl;
+        cout << "2. Hollow Rectangle Pattern" << endl;
+        cout << "3. Pyramid Pattern" << endl;
+        cout << "4. Inverted Pyramid" << endl;
+        cout << "5. Inverted Half Pyramid" << endl;
+        cout << "6. Left Half Pyramid" << endl;
+        cout << "7. Floyd Triangle" << endl;
+        cout << "8. Butterfly Pattern" << endl;
+        cout << "0. Exit " << endl;
+        cout << "\nEnter the respective Pattern Number to go with : ";
+        // test();
 
-        case 3: pyramid();
-        break;
+        int e;
+        cin >> e;
+        switch (e)
+        {
+        case 1:
+            rect_patt();
+            break;
 
-        case 4: inverted_pyramid();
-        break;
+        case 2:
+            hollow_rect();
+            break;
 
-        case 5: inverted_half_pyramid();
-        break;
+        case 3:
+            pyramid();
+            break;
 
-        case 6: left_half_pyramid();
-        break;
+        case 4:
+            inverted_pyramid();
+            break;
 
-        case 7: floyd_triangle();
-        break;
+        case 5:
+            inverted_half_pyramid();
+            break;
 
-        case 8: butterfly();
-        break;
+        case 6:
+            left_half_pyramid();
+            break;
 
-        default:rect_patt(); hollow_rect(); pyramid(); inverted_pyramid(); inverted_half_pyramid(); left_half_pyramid(); floyd_triangle(); butterfly();
- 
+        case 7:
+            floyd_triangle();
+            break;
+
+        case 8:
+            butterfly();
+            break;
+
+        case 0:
+            exit(0);
+
+        default:
+            rect_patt();
+            hollow_rect();
+            pyramid();
+            inverted_pyramid();
+            inverted_half_pyramid();
+            left_half_pyramid();
+            floyd_triangle();
+            butterfly();
+        }
     }
 }

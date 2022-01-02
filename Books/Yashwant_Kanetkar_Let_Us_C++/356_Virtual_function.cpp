@@ -43,10 +43,10 @@ class Base
 {
 public:
     // void display()  // Compile Time Binding
-    virtual void display() = 0; // Run Time Binding
-    // {
-    //     cout << "\nInside the Base Class. \n";
-    // }
+    virtual void display() // Run Time Binding
+    {
+        cout << "\nInside the Base Class. \n";
+    }
 };
 
 class Derived_one : public Base
@@ -69,8 +69,10 @@ public:
 
 void driver_program_using_pointer()
 {
+    Base base_obj;
     Base *base_ptr;
-
+    base_ptr = &base_obj;
+    
     base_ptr->display();
 
     Derived_one d1;
@@ -103,7 +105,7 @@ int main()
 {
     driver_program_using_pointer();
 
-    // driver_program_using_reference();
+    driver_program_using_reference();
 
     return 0;
 }
