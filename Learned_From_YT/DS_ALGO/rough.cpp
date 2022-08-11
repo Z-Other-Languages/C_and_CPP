@@ -1,25 +1,33 @@
 #include <iostream>
 using namespace std;
 
-struct myArray{
-    int total_size;
-    int used_size;
-    int *ptr;
-};
+void bubbleSort(int *arr, int n) 
+{
+    int temp;
+    for(int i=0; i<n; i++)  // for number of passes
+    {
+        cout << "Working on Pass Number " << i+1 << endl;
 
-void createArray(struct myArray *a, int tsize, int usize){
-    (*a).total_size = tsize;
-    (*a).used_size = usize;
-    (*a).ptr = (int *)malloc(tsize * sizeof(int));
+        for(int j=0; j<n-i-1; j++) // for comparison in each passes
+        {
+            if(arr[j] > arr[j+1] )
+            {
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            }
+        }
+
+    }
+
 }
 
-int main()
-{
-    struct myArray marks;
-    
-    createArray(&marks, 100, 3);
-    setVal(&marks);
-    show(&marks);
 
-    return 0;
+int main() {
+    int arr[] = {1, 55, 12, 16, 9, 125, 36};
+
+    int size = sizeof(arr)/sizeof(arr[0]);
+
+    cout<< endl << size << endl;
+
 }

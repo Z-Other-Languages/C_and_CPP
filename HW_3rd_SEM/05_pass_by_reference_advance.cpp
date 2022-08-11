@@ -4,7 +4,7 @@
 #include<iostream>
 using namespace std;
 
-// PASS BY REFERENCE 👇👇
+// PASS BY                👇👇
 void swap(int& a, int& b)
 {
     int temp;

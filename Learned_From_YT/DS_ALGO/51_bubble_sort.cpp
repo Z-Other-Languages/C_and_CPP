@@ -60,8 +60,8 @@ void bubbleSortAdaptive(int *arr, int n)
 int main()
 {
     // int arr[] = {12, 5, 44, 9, 20, 99, 48};
-    // int arr[] = {1, 2, 325, 40, 15, 18, 7};
-    int arr[] = {1, 2, 5, 9, 150, 180, 27};
+    int arr[] = {1, 2, 325, 40, 15, 18, 7};
+    // int arr[] = {1, 2, 5, 9, 150, 180, 27};
     int size = 7;
 
     display(arr, size);
