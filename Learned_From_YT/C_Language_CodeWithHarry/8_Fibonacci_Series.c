@@ -26,7 +26,7 @@ int fib_iterative(int n)
         
     }
 
-    return a, 'y';
+    return a;
 }
 
 int main()

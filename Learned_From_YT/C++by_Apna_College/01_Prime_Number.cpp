@@ -9,13 +9,14 @@ int main(){
 
     cout << "Enter Your Number to Check for Prime or Not : ";
     cin >>  num;
-    cout << "Entered Number is : " << num;
+    cout << "Entered Number is : " << num << "\n";
   
     while (num > div)
     {
         if(num % div == 0)
         {
             cout << "This is not a Prime Number";
+            break;
         }
 
         else{

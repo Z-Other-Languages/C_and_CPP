@@ -47,7 +47,7 @@ void rect_patt()
         for (int j = 0; j < l; j++)
         {
             cout << "* ";
-            sleep(1);
+            // sleep(0.1);
         }
         cout << "\n";
     }
